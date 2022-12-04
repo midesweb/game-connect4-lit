@@ -1,7 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import { UserPlayerView } from '../views/UserPlayerView.js';
 import { Message } from '../views/Message.js';
-import { MachinePlayerView } from '../views/MachinePlayerView.js';
 
 export class C4Turn extends LitElement {
     #message;
@@ -10,6 +8,20 @@ export class C4Turn extends LitElement {
         css`
             :host {
                 display: block;
+                margin-top: 1.2rem;
+            }
+            .player {
+                display: flex;
+                flex-direction: row;
+                margin: 0.75rem;
+                align-items: center;
+                opacity: 0.4;
+            }
+            c4-token {
+                margin-right: 1rem;
+            }
+            .active {
+                opacity: 1;
             }
         `
     ];
@@ -28,10 +40,14 @@ export class C4Turn extends LitElement {
 
     render() {
         return html`
-            ${this.activePlayerColor
-                ? html`Turno de: ${this.activePlayerColor}`
-                : ''
-            }
+            <article class="player ${this.activePlayerColor == "Red" ? 'active' : ''}">
+                <c4-token color="R"></c4-token>
+                <span>Player red</span>
+            </article>
+            <article class="player ${this.activePlayerColor == "Yellow" ? 'active' : ''}">
+                <c4-token color="Y"></c4-token>
+                <span>Player Yellow</span>
+            </article>
         `;
     }
 
@@ -40,11 +56,10 @@ export class C4Turn extends LitElement {
         let activePlayer = this.game.getActivePlayer();
         this.activePlayerColor = activePlayer.getColor();
         activePlayer.accept(this);
-        //this.game.next();
     }
 
     visitUserPlayer(userPlayer) {
-        this.#message.setMessage(this.game.getActivePlayer().getColor().toString() + ' player: ').write();
+        this.#message.setMessage(userPlayer.getColor().toString() + ' player: ').write();
         Message.ENTER_COLUMN_TO_DROP.append();
         this.dispatchEvent(new CustomEvent('catch-column'));
     }
@@ -58,10 +73,6 @@ export class C4Turn extends LitElement {
             }));
         }, 400)
     }
-
-    // dropTokenOnColumn(column) {
-    //     this.game.getActivePlayer().dropToken(column);
-    // }
 
     resetTurn() {
         this.activePlayerColor = undefined;
