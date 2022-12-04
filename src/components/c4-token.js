@@ -8,8 +8,8 @@ export class C4Token extends LitElement {
             }
             span {
                 display: inline-block;
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 border-radius: 50%;
                 background-color: #303030;
             }
@@ -18,6 +18,18 @@ export class C4Token extends LitElement {
             }
             .Y {
                 background-color: yellow;
+            }
+            @media(min-width: 350px) {
+                span {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+            @media(min-width: 400px) {
+                span {
+                    width: 40px;
+                    height: 40px;
+                }
             }
         `
     ];

@@ -7,12 +7,19 @@ export class C4Board extends LitElement {
     static styles = [
         css`
             :host {
-                max-width: 500px;
+                max-width: 460px;
                 margin: 1rem;
                 display: grid;
                 grid-template-columns: repeat(${Coordinate.NUMBER_COLUMNS}, auto);
-                column-gap: 0.7rem;
-                row-gap: 1rem;
+                column-gap: 0.4rem;
+                row-gap: 0.6rem;
+            }
+            @media(min-width: 380px) {
+                :host {
+                    column-gap: 0.7rem;
+                    row-gap: 1rem;
+                    
+                }
             }
         `
     ];

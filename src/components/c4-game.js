@@ -19,10 +19,12 @@ export class C4Game extends LitElement {
                 --primary-color: #09A5FF;
             }
             section {
+                flex-direction: column;
                 background-color: var(--primary-color);
                 display: flex;
                 align-items: stretch;
                 width: 100%;
+                min-height: 200px;
             }
             .hidden {
                 display: none;
@@ -49,6 +51,12 @@ export class C4Game extends LitElement {
             footer {
                 padding: 0.5rem 1rem;
                 background-color: #ddd;
+            }
+
+            @media(min-width: 635px) {
+                section {
+                    flex-direction: row;
+                }
             }
         `
     ];
