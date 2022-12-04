@@ -30,11 +30,11 @@ export class C4PlayerSelector extends LitElement {
 
     render() {
         return html`
-            <h1>Selecciona el número de jugadores</h1>
+            <h1>Select number of players</h1>
             <ul>
-                <li><c4-button @click=${this.onePlayer}>Un jugador</c4-button></li>
-                <li><c4-button @click=${this.twoPlayers}>Dos Jugadores</c4-button></li>
-                <li><c4-button @click=${this.demo}>Demo máquina</c4-button></li>
+                <li><c4-button @click=${this.onePlayer}>One player</c4-button></li>
+                <li><c4-button @click=${this.twoPlayers}>Two players</c4-button></li>
+                <li><c4-button @click=${this.demo}>Demo (machine vs machine)</c4-button></li>
             </ul>
         `;
     }
