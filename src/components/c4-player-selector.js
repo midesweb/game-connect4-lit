@@ -5,6 +5,7 @@ export class C4PlayerSelector extends LitElement {
     static styles = [
         css`
             :host {
+                max-width: 460px;
                 display: block;
                 color: #fff;
                 padding: 1rem;

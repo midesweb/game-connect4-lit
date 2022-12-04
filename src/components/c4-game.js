@@ -58,6 +58,13 @@ export class C4Game extends LitElement {
                     flex-direction: row;
                 }
             }
+            @media(min-width: 550px) {
+                :host {
+                    box-shadow: 4px 4px 12px rgba(100, 100, 100, 0.5);
+                    border: 8px solid #fff;
+                    border-radius: 0.5rem;
+                }
+            }
         `
     ];
 
