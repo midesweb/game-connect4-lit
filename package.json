@@ -1,23 +1,32 @@
 {
-  "name": "mastermind.solution.javascript",
+  "name": "game-connect4-lit",
   "version": "1.0.0",
-  "description": "mastermind using NodeJs",
-  "main": "mastermind.js",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "@dile/dile-button": "^2.3.1",
+    "@dile/dile-button-icon": "^0.0.19",
+    "@dile/icons": "^0.0.16",
+    "lit": "^2.4.1",
+    "vite": "^3.2.4"
+  },
   "scripts": {
-    "test": "npm test"
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/USantaTecla-Mastermind/solution.Javascript.git"
+    "url": "git+https://github.com/midesweb/game-connect4-lit.git"
   },
-  "author": "usantatecla",
-  "license": "MIT",
+  "keywords": [
+    "conect4",
+    "game"
+  ],
+  "author": "Miguel Angel Alvarez",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/USantaTecla-Mastermind/solution.Javascript/issues"
+    "url": "https://github.com/midesweb/game-connect4-lit/issues"
   },
-  "homepage": "https://github.com/USantaTecla-Mastermind/solution.Javascript#readme",
-  "dependencies": {
-    "console-input": "^1.0.2",
-    "enums-js": "^1.0.0"
-  }
+  "homepage": "https://github.com/midesweb/game-connect4-lit#readme"
 }
