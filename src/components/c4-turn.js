@@ -51,7 +51,6 @@ export class C4Turn extends LitElement {
 
     visitMachinePlayer(machinePlayer) {
         setTimeout( () => {
-            console.log('esrot wen visit machine ' , machinePlayer.getColumn());
             this.dispatchEvent(new CustomEvent('machine-player-column', {
                 bubbles: true,
                 composed: true,

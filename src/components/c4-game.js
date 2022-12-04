@@ -118,19 +118,16 @@ export class C4Game extends LitElement {
     }
 
     doColumnSelected(e) {
-        console.log('Estoy en doColumnSelected', e.detail.index);
         if(this.isOnColumnInput) {
             this.putToken(e.detail.index);
         }
     }
 
     doMachineColumnSelected(e) {
-        console.log('doMachineColumnSelected', e.detail.index);
         this.putToken(e.detail.index);
     }
 
     putToken(column) {
-        console.log('putToken', column);
         this.#game.getActivePlayer().dropToken(column);
         this.isOnColumnInput = false;
         this.boardComponent.updateBoard();

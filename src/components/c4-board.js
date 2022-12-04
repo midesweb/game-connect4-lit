@@ -47,14 +47,12 @@ export class C4Board extends LitElement {
             for (let j = 0; j < Coordinate.NUMBER_COLUMNS; j++) {
                 let color = this.game.getColor(new Coordinate(i, j)).toString()[0];
                 boardColors.push(color);
-                console.log(` - ${this.game.getColor(new Coordinate(i, j)).toString()[0]} `);
             }
         }
         this.boardColors = boardColors;
     }
 
     doTokenSelected(e) {
-        console.log('do token selected::::::', e.detail.index);
         let column = this.getColumnIndex(e.detail.index);
         let valid = Coordinate.isColumnValid(column);
         if(!valid) {

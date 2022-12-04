@@ -37,7 +37,6 @@ export class C4Token extends LitElement {
     }
 
     dispatchSelected() {
-        console.log('dispatchSelected', this.index);
         this.dispatchEvent(new CustomEvent('token-selected', { 
             bubbles: true,
             composed: true,

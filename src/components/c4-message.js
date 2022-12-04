@@ -21,11 +21,9 @@ export class C4Message extends LitElement {
         super();
         this.message = '';
         window.addEventListener('new-message', e => {
-            console.log('new-message recibed', e.detail);
             this.message = e.detail.message
         });
         window.addEventListener('append-message', e => {
-            console.log('new-message recibed', e.detail);
             this.message += " " + e.detail.message
         });
     }

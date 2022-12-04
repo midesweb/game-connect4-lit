@@ -8,7 +8,6 @@ export class MachinePlayerView extends PlayerView {
 
     getColumn() {
         let column = this.getActivePlayer().getColumn();
-        console.log(`Columna escogida aleatoriamente: ` + column);
         return column;
     }
 

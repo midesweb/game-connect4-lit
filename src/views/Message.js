@@ -37,7 +37,6 @@ export class Message {
             bubbles: true,
             detail: { message: this.#string }
         }));
-        console.log(this.#string);
     }
     toString() {
         return this.#string;
