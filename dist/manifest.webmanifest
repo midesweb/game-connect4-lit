@@ -1,0 +1,1 @@
+{"name":"Connect 4","short_name":"Connect 4","start_url":"/","display":"standalone","background_color":"#ffffff","lang":"en","scope":"/","description":"Connect 4 game","theme_color":"#09A5FF","icons":[{"src":"pwa-192x192.png","sizes":"192x192","type":"image/png"},{"src":"pwa-512x512.png","sizes":"512x512","type":"image/png"}]}

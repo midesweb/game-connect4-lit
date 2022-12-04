@@ -6,7 +6,7 @@ export class C4Button extends LitElement {
     static styles = [
         css`
             :host {
-                display: block;
+                display: inline-block;
                 --dile-button-border-radius: 2rem;
                 --dile-button-border-width: 2px;
                 --dile-button-background-color: transparent;
